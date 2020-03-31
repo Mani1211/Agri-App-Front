@@ -1,0 +1,42 @@
+
+
+.card {
+  padding-top: 30px;
+  padding-left: 100px;
+  max-width: 700px; 
+  position: absolute; 
+  max-height: 600px;
+  background-image: url('../../assets/unnamed.jpg');
+}
+.login{
+padding-right: 500px;
+}
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.button{
+  padding-left: 90px;
+  padding-top: 30px;
+}
+.col{
+  padding-top: 80px;
+}
+.login{
+  text-align: center;
+  padding-left: 60px;
+
+
+}
+
+ 
+mat-icon{
+  padding-right: 30px;
+  padding-left: 20px;
+ 
+}
+/* body{
+  background-image: url('../../assets/Baler1.jpg');
+  background-size: cover;
+  background-position: center;
+} */

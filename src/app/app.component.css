@@ -1,0 +1,22 @@
+
+
+/* ::-webkit-scrollbar{
+    display:inline-block;
+} */
+
+:host{
+    display: flex;
+    flex-direction: column;
+    height:100;
+}
+
+
+mat-icon{
+    padding-right: 30px;
+    padding-left: 20px;
+   
+}
+/* .content{
+    background-image: url('../assets/agr.jpg');
+    background-size: cover;
+} */

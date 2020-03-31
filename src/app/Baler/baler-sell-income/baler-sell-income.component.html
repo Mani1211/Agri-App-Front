@@ -1,0 +1,113 @@
+ 
+
+
+<div style="padding: 20px">
+ 
+    <div>
+        <mat-card class="card">
+            <mat-card-title class="card-title">
+                Baler Sell Income Details
+            </mat-card-title>
+  
+  
+            <mat-card-content>
+  
+              <form  [formGroup]="createForm" class="create-form">
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <mat-form-field>
+                              <mat-label>
+                                  Date 
+                              </mat-label>
+                              <input matInput formControlName='date' #date  required [matDatepicker]="dobDatePicker">
+                              <mat-datepicker-toggle [for]="dobDatePicker" matSuffix></mat-datepicker-toggle>
+                              <mat-datepicker #dobDatePicker></mat-datepicker>
+                
+                          </mat-form-field>
+                          <br>
+                        
+                              <mat-form-field>
+                                  <mat-label>
+                                      Buyer Name
+                                  </mat-label>
+                                  <input matInput formControlName="buyerName"  #buyerName  required>
+                              </mat-form-field>
+                              <br>
+                              
+                              <mat-form-field>
+                                  <mat-label>
+                                      Buyer Cell Number
+                                  </mat-label>
+                                  <input matInput formControlName="buyerCellNumber" #buyerCellNumber   required>
+                              </mat-form-field>
+                              <br>
+                
+                              <mat-form-field>
+                                <mat-label>
+                                    Vehicle Number
+                                </mat-label>
+                                <input matInput formControlName="vehicleNumber"  #vehicleNumber  required>
+                            </mat-form-field>
+                            <br>
+                      
+                              <mat-form-field>
+                                  <mat-label>
+                                      Number Of Bales
+                                  </mat-label>
+                                  <input matInput formControlName="numberOfBales" #numberOfBales   required>
+                              </mat-form-field>
+                              <br>
+                      </div>
+                      <div class="col-lg-6">
+  
+                          <mat-form-field>
+                              <mat-label>
+                               Rent Of Bales
+                              </mat-label>
+                              <input matInput formControlName="costPerBales" #costPerBales  required>
+                          </mat-form-field>
+                          <br>
+                          <mat-form-field>
+                              <mat-label>
+                                  Total Amount
+                              </mat-label>
+                              <input matInput formControlName="totalAmount" #totalAmount  ngModel="{{ costPerBales.value * numberOfBales.value }}" required>
+                            
+                          </mat-form-field>
+                          <br>
+            
+                          <mat-form-field>
+                            <mat-label>
+                                Advance
+                            </mat-label>
+                            <input matInput formControlName="advance" #advance  required>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                            <mat-label>
+                                Balance
+                            </mat-label>
+                            <input matInput formControlName="balance" #balance  ngModel="{{totalAmount.value - advance.value}}" required >
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                            <mat-label>
+                                Amount Given
+                            </mat-label>
+                            <input matInput formControlName="amountGiven" #amountGiven ngModel="{{ advance.value }}"  required>
+                        </mat-form-field>
+                        <br>
+                      </div>
+                  </div>
+             
+  
+              <div class="button">
+                  <button [disabled]="createForm.invalid" mat-raised-button color="primary"   (click)="addSellIncome(date.value,buyerName.value,buyerCellNumber.value,vehicleNumber.value
+                  ,numberOfBales.value,costPerBales.value,totalAmount.value,advance.value,balance.value,amountGiven.value)" >Save</button>
+              </div>
+              </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+   
+  </div>

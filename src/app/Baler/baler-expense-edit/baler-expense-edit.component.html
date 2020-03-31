@@ -1,0 +1,142 @@
+
+
+ <div style="padding: 20px">
+    <!-- applicant card div start -->
+    <div>
+        <mat-card class="card">
+            <mat-card-title class="card-title">
+                Edit Baler Expense Details
+            </mat-card-title>
+            <mat-card-content>
+                <form  [formGroup]="updateForm" class="create-form">
+                   <div class="row">
+                       <div class="col-lg-6">
+                        <mat-form-field>
+                            <mat-label>
+                                Date 
+                            </mat-label>
+                            <input matInput formControlName="date"  #date  required [matDatepicker]="dobDatePicker">
+                            <mat-datepicker-toggle [for]="dobDatePicker" matSuffix></mat-datepicker-toggle>
+                            <mat-datepicker #dobDatePicker></mat-datepicker>
+                        </mat-form-field>
+    
+                <br>
+                <mat-form-field>
+                  <mat-label>
+                      Driver Name
+                  </mat-label>
+                  <input matInput formControlName="driverName"  #driverName required>
+              </mat-form-field>
+              <br>
+                    
+                    <mat-form-field>
+                        <mat-label>
+                            Manager Name
+                        </mat-label>
+                        <input matInput formControlName="managerName" #managerName required>
+                    </mat-form-field>
+                    <br>
+                    
+                    <mat-form-field>
+                        <mat-label>
+                        Driver Salary
+                        </mat-label>
+                        <input matInput type="number" formControlName="driverSalary"   #driverSalary required>
+                    </mat-form-field>       
+                        <br>
+    
+                    <mat-form-field>
+                        <mat-label>
+                     Manager Salary
+                        </mat-label>
+                        <input matInput type="number" formControlName="managerSalary"  #managerSalary required>
+                    </mat-form-field>
+                    
+                    <br>
+                    <mat-form-field>
+                        <mat-label>
+                           Worker Salary
+                        </mat-label>
+                        <input matInput formControlName="workerSalary"  #workerSalary required>
+                    </mat-form-field>
+                    <br>
+                   
+                    <mat-form-field>
+                        <mat-label>
+                       Petrol
+                        </mat-label>
+                        <input matInput formControlName="petrol"  #petrol required>
+                    </mat-form-field>
+                    <br>
+
+                    
+                       </div>
+                       <div class="col-lg-6">
+                        <mat-form-field>
+                            <mat-label>
+                                Diesel
+                            </mat-label>
+                            <input matInput formControlName="diesel"  #diesel required>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                            <mat-label>
+                              Service
+                            </mat-label>
+                            <input matInput formControlName="service"  #service required>
+                        </mat-form-field>
+                        <br>
+          
+                        <mat-form-field>
+                          <mat-label>
+                             Spare
+                          </mat-label>
+                          <input matInput formControlName="spare"   #spare required>
+                      </mat-form-field>
+                      <br>
+                      <mat-form-field>
+                          <mat-label>
+                             Food Cost
+                          </mat-label>
+                          <input matInput formControlName="foodCost"  #foodCost required>
+                      </mat-form-field>
+                      <br>
+
+                      <mat-form-field>
+                        <mat-label>
+                           Jute Cost
+                        </mat-label>
+                        <input matInput formControlName="juteCost"  #juteCost required>
+                    </mat-form-field>
+                    <br>
+
+                    <mat-form-field>
+                        <mat-label>
+                           Hay Cost
+                        </mat-label>
+                        <input matInput formControlName="hayCost"  #hayCost required>
+                    </mat-form-field>
+                    <br>
+
+                      <mat-form-field>
+                          <mat-label>
+                              Total Amount
+                          </mat-label>
+                          <input matInput type="number" formControlName="totalAmount" #totalAmount  required>
+                      </mat-form-field>
+                      <br>
+          
+                       </div>
+                   </div>
+                   
+              <div class="button">
+                  <button [disabled]="updateForm.invalid"  mat-raised-button color="primary"  (click)="updateExpense(driverName.value,managerName.value,driverSalary.value,managerSalary.value,
+                  date.value,petrol.value,diesel.value,service.value,spare.value,foodCost.value,totalAmount.value,workerSalary.value,hayCost.value,juteCost.value)" >Save</button>
+              </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+   
+  </div>
+  
