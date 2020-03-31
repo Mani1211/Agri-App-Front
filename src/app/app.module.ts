@@ -1,3 +1,4 @@
+import { SugarIncomeEditComponent } from './Sugarcane/sugar-income-edit/sugar-income-edit.component';
 
 import { BalerService } from './balerent.service';
 import { BalersellService } from './balersell.service';
@@ -27,8 +28,7 @@ import { MaterialModule } from './material/material.module';
 import { RiceIncomeEditComponent } from './Rice-Plant/rice-income-edit/rice-income-edit.component';
 import { SugarcaneService } from './sugarcane.service';
 import { RiceExpenseEditComponent } from './Rice-Plant/rice-expense-edit/rice-expense-edit.component';
-import { SugarIncomeEditComponent } from './sugarcane/sugar-income-edit/sugar-income-edit.component';
-import { SugarExpenseEditComponent } from './sugarcane/sugar-expense-edit/sugar-expense-edit.component';
+
 import { BalerSellIncomeComponent } from './Baler/baler-sell-income/baler-sell-income.component';
 import { BalerRentIncomeComponent } from './Baler/baler-rent-income/baler-rent-income.component';
 import { BalerExpenseComponent } from './Baler/baler-expense/baler-expense.component';
@@ -37,6 +37,7 @@ import { BalerManageComponent } from './Baler/baler-manage/baler-manage.componen
 import { BalerExpenseEditComponent } from './Baler/baler-expense-edit/baler-expense-edit.component';
 import { BalerSellIncomeEditComponent } from './Baler/baler-sell-income-edit/baler-sell-income-edit.component';
 import { BalerRentIncomeEditComponent } from './Baler/baler-rent-income-edit/baler-rent-income-edit.component';
+import { SugarExpenseEditComponent } from './Sugarcane/sugar-expense-edit/sugar-expense-edit.component';
 
 
 
@@ -81,6 +82,8 @@ const routes:Routes = [
     LoginComponent,
     RiceIncomeComponent,
     RiceExpenseComponent,
+    SugarIncomeEditComponent,
+    SugarExpenseEditComponent,
     SugarIncomeComponent,
     SugarExpenseComponent,
     RiceDetailsComponent,
@@ -89,8 +92,7 @@ const routes:Routes = [
     RiceIncomeEditComponent,
     SugarDetailsComponent,
     RiceExpenseEditComponent,
-    SugarIncomeEditComponent,
-    SugarExpenseEditComponent,
+   
     BalerSellIncomeComponent,
     BalerRentIncomeComponent,
     BalerExpenseComponent,
