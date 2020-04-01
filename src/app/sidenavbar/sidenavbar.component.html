@@ -3,9 +3,12 @@
 
 <mat-sidenav-container fullscreen > 
 
-  <mat-sidenav #sidenav opened mode="side" position="fixed" >
- <mat-toolbar color="primary">
-    <h3 style="padding-left: 40px;"> Agri Machines</h3>
+  
+
+  <mat-sidenav #sidenav opened mode="side"  >
+  <!-- <mat-toolbar style=" background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);">  -->
+  <mat-toolbar color="primary"> 
+     <h3 style="padding-left: 40px;"> Agri Machines</h3>
  </mat-toolbar>
 
          
@@ -80,21 +83,20 @@
       <mat-nav-list>
         <a mat-list-item routerLink="/main/balermanage">Manage income & Expense</a>
       </mat-nav-list>
-         
-       
-      </mat-expansion-panel>
+               </mat-expansion-panel>
     <!-- </mat-card> -->
    
   </mat-sidenav>
   <mat-sidenav-content class="content">
   
-        <mat-toolbar  color="primary" position="fixed" role="primary">
+        <mat-toolbar  color="primary" >
          <h2 style="padding-left: 320px; "> Agriculture Machine Management</h2>
          <mat-nav-list style="padding-left: 350px; padding-bottom: 5px;" routerLink="/login">
        <span style="padding-top: 10px;"></span>Logout
         </mat-nav-list>
           </mat-toolbar>
 
+         
     <div style="padding-top:5px;">
       <router-outlet></router-outlet>
     </div>

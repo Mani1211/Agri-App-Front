@@ -5,10 +5,11 @@
   color: darkred;
 }
 
-.expansion{
+/* .expansion{
 color: aquamarine;
+background: linear-gradient(to bottom right, #0099ff 0%, #ff0066 99%);
 padding: 15px;
-}
+} */
 .title{
   color:#2B2B52;
   text-decoration: double;

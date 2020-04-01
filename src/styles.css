@@ -2,22 +2,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-.mat-sidenav{width:280px;}
+.mat-sidenav{width:280px;
+}
+
+.mat-sidenav mat-expansion-panel{width:280px;padding: 10px;
+}
 .mat-drawer{
-    background-color:dimgray;
-/* background-image: url('./assets/unnamed.jpg');} */}
-.main-content{padding: 20px; background-image: url('./assets/Rice.jpg');}
+  background:#6680b2;
+}
+
 
 .hide{
   display: none;
 }
 
 body{
-  background-image: url('./assets/unnamed.jpg');
+  background-image: url('./assets/wp1886334.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+   background-size: cover; 
+  background-position:initial
+ 
 }
 .search-div{
   margin: 10px;

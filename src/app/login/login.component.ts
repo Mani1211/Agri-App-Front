@@ -1,7 +1,7 @@
 import { AuthService } from './../auth.service';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms"
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 
 
@@ -15,7 +15,7 @@ username:String;
 password:String;
 createForm:FormGroup
 
-  constructor(private router:Router,private auth:AuthService,private fb:FormBuilder) {
+  constructor(private route:ActivatedRoute,private router:Router,private auth:AuthService,private fb:FormBuilder) {
     this.createForm=this.fb.group({
       username:[''],
       password:['']
@@ -27,7 +27,8 @@ createForm:FormGroup
    login(username,password){
      console.log(username,password)
 if(this.auth.login(username,password)){
-  this.router.navigate(['/main']);
+  let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl')
+  this.router.navigate([returnUrl || '/main']);
 }
 
 

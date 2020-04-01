@@ -12,7 +12,14 @@ export class AuthService {
     if(username === 'admin' && password === 'admin'){
 
     this.isLoggedin = true;
+  
+    localStorage.setItem('login','1')
      return true;
     }
   }
+
+ 
+isLogin(){
+
+}
 }

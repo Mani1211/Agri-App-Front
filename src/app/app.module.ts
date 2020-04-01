@@ -49,7 +49,7 @@ const routes:Routes = [
   {  path:'login', component:LoginComponent},
   { 
      path:'main',
-     component:SidenavbarComponent,canActivate:[AuthGuard],
+     component:SidenavbarComponent,
      children:[
       {  path:'riceincome' , component:RiceIncomeComponent},
       {  path:'riceexpense' , component:RiceExpenseComponent},
