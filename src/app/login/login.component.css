@@ -6,7 +6,7 @@
   max-width: 700px; 
   position: absolute; 
   max-height: 600px;
-  background-image: url('../../assets/unnamed.jpg');
+  /* background-image: url('../../assets/unnamed.jpg'); */
 }
 .login{
 padding-right: 500px;
