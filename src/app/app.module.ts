@@ -1,3 +1,5 @@
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 import { SugarIncomeEditComponent } from './Sugarcane/sugar-income-edit/sugar-income-edit.component';
 
 import { BalerService } from './balerent.service';
@@ -47,7 +49,7 @@ const routes:Routes = [
   {  path:'login', component:LoginComponent},
   { 
      path:'main',
-     component:SidenavbarComponent,
+     component:SidenavbarComponent,canActivate:[AuthGuard],
      children:[
       {  path:'riceincome' , component:RiceIncomeComponent},
       {  path:'riceexpense' , component:RiceExpenseComponent},
@@ -119,7 +121,9 @@ const routes:Routes = [
     RicePlantService,
     SugarcaneService,
     BalersellService,
-    BalerService
+    BalerService,
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent],
   entryComponents:[]

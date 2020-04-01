@@ -9,21 +9,21 @@
     "postinstall": "ng build --prod",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:gh":"ng build --prod --base-href='https://Mani1211.github.io/Agri-App-Front/' && ngh"
+    "deploy:gh": "ng build --prod --base-href='https://Mani1211.github.io/Agri-App-Front/' && ngh"
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "^9.0.3",
-    "@angular/material": "^8.2.3",
-    "@angular/compiler-cli": "^9.0.2",
     "@angular/animation": "^4.0.0-beta.8",
     "@angular/animations": "~9.0.2",
     "@angular/cdk": "~8.2.3",
+    "@angular/cli": "^9.0.3",
     "@angular/common": "^9.0.2",
     "@angular/compiler": "~9.0.2",
+    "@angular/compiler-cli": "^9.0.2",
     "@angular/core": "^9.0.3",
     "@angular/flex-layout": "^9.0.0-beta.29",
     "@angular/forms": "^9.0.3",
+    "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~9.0.2",
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "^9.0.3",
@@ -41,7 +41,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.901.0-next.0",
-   
     "@angular/language-service": "~9.0.2",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
@@ -60,8 +59,6 @@
     "typescript": "^3.6.4"
   },
   "engines": {
-    "node":"12.14.0"
+    "node": "12.14.0"
   }
-
-
 }
