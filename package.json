@@ -8,7 +8,8 @@
     "test": "ng test",
     "postinstall": "ng build --prod",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy:gh":"ng build --prod --base-href='https://Mani1211.github.io/Agri-App-Front/' && ngh"
   },
   "private": true,
   "dependencies": {
