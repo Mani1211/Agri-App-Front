@@ -41,7 +41,7 @@
                         <mat-label>
                         Driver Salary
                         </mat-label>
-                        <input matInput formControlName="driverSalary" ng-change="change()"  #driverSalary required>
+                        <input matInput formControlName="driverSalary"   #driverSalary required>
                     </mat-form-field>       
                         <br>
     
@@ -49,7 +49,7 @@
                         <mat-label>
                      Manager Salary
                         </mat-label>
-                        <input matInput formControlName="managerSalary" ng-change="change()" #managerSalary required>
+                        <input matInput formControlName="managerSalary"  #managerSalary required>
                     </mat-form-field>
                     
                     <br>
@@ -58,7 +58,7 @@
                         <mat-label>
                        Petrol
                         </mat-label>
-                        <input matInput formControlName="petrol" ng-change="change()" #petrol required>
+                        <input matInput formControlName="petrol"  #petrol required>
                     </mat-form-field>
                     <br>
                        </div>
@@ -67,14 +67,14 @@
                             <mat-label>
                                 Diesel
                             </mat-label>
-                            <input matInput formControlName="diesel" ng-change="change()" #diesel required>
+                            <input matInput formControlName="diesel"  #diesel required>
                         </mat-form-field>
                         <br>
                         <mat-form-field>
                             <mat-label>
                               Service
                             </mat-label>
-                            <input matInput formControlName="service" ng-change="change()" #service required>
+                            <input matInput formControlName="service"  #service required>
                         </mat-form-field>
                         <br>
           
@@ -82,21 +82,22 @@
                           <mat-label>
                              Spare
                           </mat-label>
-                          <input matInput formControlName="spare" ng-change="change()"  #spare required>
+                          <input matInput formControlName="spare"   #spare required>
                       </mat-form-field>
                       <br>
                       <mat-form-field>
                           <mat-label>
                              Food Cost
                           </mat-label>
-                          <input matInput formControlName="foodCost" ng-change="change()" #foodCost required>
+                          <input matInput formControlName="foodCost"  #foodCost required>
                       </mat-form-field>
                       <br>
                       <mat-form-field>
                           <mat-label>
                               Total Amount
                           </mat-label>
-                          <input matInput formControlName="totalAmount" ng-change="change()" #totalAmount required>
+                          <input matInput formControlName="totalAmount" ngModel="{{driverSalary.value * 1  +  managerSalary.value * 1  + petrol.value * 1 + diesel.value * 1 + 
+                            service.value * 1 + spare.value * 1 + foodCost.value * 1 }}" #totalAmount required>
                       </mat-form-field>
                       <br>
           

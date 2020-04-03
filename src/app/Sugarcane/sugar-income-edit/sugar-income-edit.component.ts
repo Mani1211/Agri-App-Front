@@ -21,6 +21,7 @@ createForm(){
     date:['',Validators.required],
   customerName:['',Validators.required],
   customerPlace:['',Validators.required],
+  vehicleNumber:['',Validators.required],
   ryotNumber:['',Validators.required],
   plotNumber:['',Validators.required],
   costPerTon:['',Validators.required],
@@ -39,6 +40,7 @@ createForm(){
         this.updateForm.get('date').setValue(this.income.date)
         this.updateForm.get('customerName').setValue(this.income.customerName)
         this.updateForm.get('customerPlace').setValue(this.income.customerPlace)
+        this.updateForm.get('vehicleNumber').setValue(this.income.vehicleNumber)
         this.updateForm.get('ryotNumber').setValue(this.income.ryotNumber)
         this.updateForm.get('plotNumber').setValue(this.income.plotNumber)
         this.updateForm.get('totalTons').setValue(this.income.totalTons)
@@ -53,9 +55,9 @@ createForm(){
   }
 
   
-  updateSugarIncome(date,customerName,customerPlace,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven){
+  updateSugarIncome(date,customerName,customerPlace,vehicleNumber,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven){
     console.log(date,customerName,customerPlace,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven)
-    this.details.updateSugarIncome(this.id,date,customerName,customerPlace,ryotNumber,plotNumber,
+    this.details.updateSugarIncome(this.id,date,customerName,customerPlace,vehicleNumber,ryotNumber,plotNumber,
       costPerTon,totalTons,amount,advance,balance,amountGiven).subscribe(()=>{
         this.snackbar.open("Updated Successfully",'',{
           duration:5000,

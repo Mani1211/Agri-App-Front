@@ -18,11 +18,12 @@ export class SugarcaneService {
     return this.http.get(`${this.uri}/sugarincomedetails/${id}`)
   }
 
-  addSugarIncome(date,customerName,customerPlace,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven){
+  addSugarIncome(date,customerName,customerPlace,vehicleNumber,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven){
     const income ={
     date:date,
     customerName:customerName,
     customerPlace:customerPlace,
+    vehicleNumber:vehicleNumber,
     ryotNumber:ryotNumber,
     plotNumber:plotNumber,
     costPerTon:costPerTon,
@@ -36,12 +37,13 @@ export class SugarcaneService {
     return this.http.post(`${this.uri}/sugarincomedetails/add`,income)
   }
 
-  updateSugarIncome( id,date,customerName,customerPlace,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven){
+  updateSugarIncome( id,date,customerName,customerPlace,vehicleNumber,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven){
     const income ={
       id:id,
     date:date,
     customerName:customerName,
     customerPlace:customerPlace,
+    vehicleNumber:vehicleNumber,
     ryotNumber:ryotNumber,
     plotNumber:plotNumber,
     costPerTon:costPerTon,

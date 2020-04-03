@@ -18,6 +18,7 @@ export class SugarIncomeComponent {
     date:['',Validators.required],
   customerName:['',Validators.required],
   customerPlace:['',Validators.required],
+  vehicleNumber:['',Validators.required],
   ryotNumber:['',Validators.required],
   plotNumber:['',Validators.required],
   costPerTon:['',Validators.required],
@@ -32,8 +33,8 @@ export class SugarIncomeComponent {
   ngOnInit(){
     
   }
-  addSugarIncome(date,customerName,customerPlace,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven){
-    this.details.addSugarIncome(date,customerName,customerPlace,ryotNumber,plotNumber,
+  addSugarIncome(date,customerName,customerPlace,vehicleNumber,ryotNumber,plotNumber,costPerTon,totalTons,amount,advance,balance,amountGiven){
+    this.details.addSugarIncome(date,customerName,customerPlace,vehicleNumber,ryotNumber,plotNumber,
       costPerTon,totalTons,amount,advance,balance,amountGiven).subscribe(()=>{
         this.snackbar.open("Added Successfully",'',{
           duration:5000,

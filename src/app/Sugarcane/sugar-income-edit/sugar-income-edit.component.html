@@ -37,7 +37,13 @@
                             </mat-form-field>
                             <br>
                             
-                          
+                            <mat-form-field>
+                                <mat-label>
+                                    Vehicle Number
+                                </mat-label>
+                                <input matInput formControlName="vehicleNumber" #vehicleNumber required>
+                            </mat-form-field>
+                            <br>
                           
                             <mat-form-field>
                                 <mat-label>
@@ -54,16 +60,17 @@
                                 <input matInput formControlName="plotNumber" #plotNumber required>
                             </mat-form-field>
                             <br>
-                            <mat-form-field>
-                                <mat-label>
-                                    Cost Per Ton
-                                </mat-label>
-                                <input matInput formControlName="costPerTon" #costPerTon required>
-                            </mat-form-field>
-                            <br>
+                         
                       </div>
   
                       <div class="col-lg-6">
+                        <mat-form-field>
+                            <mat-label>
+                                Cost Per Ton
+                            </mat-label>
+                            <input matInput formControlName="costPerTon" #costPerTon required>
+                        </mat-form-field>
+                        <br>
                           <mat-form-field>
                               <mat-label>
                                   Total Tons
@@ -105,7 +112,7 @@
                
   
               <div class="button">
-                  <button [disabled]="updateForm.invalid" mat-raised-button color="primary" (click)="updateSugarIncome(date.value,customerName.value,customerPlace.value,ryotNumber.value,
+                  <button [disabled]="updateForm.invalid" mat-raised-button color="primary" (click)="updateSugarIncome(date.value,customerName.value,customerPlace.value,vehicleNumber.value,ryotNumber.value,
                   plotNumber.value,costPerTon.value,totalTons.value,amount.value,advance.value,balance.value,amountGiven.value)" >Save</button>
               </div>
               </form>

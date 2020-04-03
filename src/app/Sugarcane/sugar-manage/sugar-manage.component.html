@@ -30,6 +30,11 @@
         <td mat-cell *matCellDef="let income"> {{income.customerPlace}}</td>
       </ng-container>
 
+      <ng-container matColumnDef="vehicleNumber">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Vehicle Number</th>
+        <td mat-cell *matCellDef="let income"> {{income.vehicleNumber}}</td>
+      </ng-container>
+
       <ng-container matColumnDef="ryotNumber">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Ryot Number</th>
         <td mat-cell *matCellDef="let income"> {{income.ryotNumber}}</td>

@@ -28,7 +28,7 @@ export class SugarManageComponent implements OnInit {
    }
 
 
-  displayedColumns1: string[] = ['date','customerName','customerPlace','ryotNumber','plotNumber','costPerTon','totalTons','amount','advance','balance','amountGiven','actions'];
+  displayedColumns1: string[] = ['date','customerName','customerPlace','vehicleNumber','ryotNumber','plotNumber','costPerTon','totalTons','amount','advance','balance','amountGiven','actions'];
 
   displayedColumns2: string[] = ['date','driverName','managerName','driverSalary','managerSalary','petrol','diesel','service','spare','foodCost','totalAmount','actions'];
 

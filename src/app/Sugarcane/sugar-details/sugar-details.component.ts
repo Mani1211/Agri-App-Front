@@ -37,7 +37,7 @@ export class SugarDetailsComponent implements OnInit {
 
   constructor(private details:SugarcaneService,private router:Router) { }
 
-  displayedColumns1: string[] = ['date','customerName','customerPlace','ryotNumber','plotNumber','costPerTon','totalTons','amount','advance','balance','amountGiven'];
+  displayedColumns1: string[] = ['date','customerName','customerPlace','vehicleNumber','ryotNumber','plotNumber','costPerTon','totalTons','amount','advance','balance','amountGiven'];
 
   displayedColumns2: string[] = ['date','driverName','managerName','driverSalary','managerSalary','petrol','diesel','service','spare','foodCost','totalAmount'];
 
