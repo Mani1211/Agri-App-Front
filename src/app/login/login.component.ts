@@ -27,23 +27,13 @@ createForm:FormGroup
    login(username,password){
      console.log(username,password)
 if(this.auth.login(username,password)){
-  let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl')
-  this.router.navigate([returnUrl || '/main']);
+  // let returnUrl = this.route.snapshot.queryParamMap.get('returnUrl')
+  this.router.navigate(['/main'])
 }
-
+else{
+      this.router.navigate(['/login',alert("Enter correct username and password")]);
+    }
 
    }
-  
-  // login(){
-  //   console.log(this.username,this.password ,"fvv")
-  //   if(this.username === 'admin' && this.password === 'admin'){
-    
-  //     this.router.navigate(['/main']);
-    
-  // }
 
-  //   else{
-  //     this.router.navigate(['/login',alert("Enter correct username and password")]);
-  //   }
-  // }
 }
