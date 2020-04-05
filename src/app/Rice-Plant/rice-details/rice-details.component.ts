@@ -33,6 +33,8 @@ export class RiceDetailsComponent implements OnInit {
   totalBalance=0;
   searchKey1: string;
   searchKey2: string;
+  fromDate=""
+  toDate=""
   expandedElement;
   expandedElement2;
   @ViewChild(MatSort) sort:MatSort;
@@ -109,6 +111,8 @@ export class RiceDetailsComponent implements OnInit {
       }
       return console.log(this.totalBalance);
     }  
+
+
 
 }
 

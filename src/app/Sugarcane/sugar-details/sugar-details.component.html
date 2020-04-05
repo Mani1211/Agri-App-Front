@@ -1,22 +1,68 @@
 <div style="padding: 20px">
-  <mat-card>
-    <mat-card-title>
-      Full Details
-    </mat-card-title>
-    <mat-card-content>
-     
+  <div class="row">
+    <div class="col-sm-6">
+      <mat-card>
+        <mat-card-title>
+          Full Details
+        </mat-card-title>
+        <mat-card-content>
+         
+          
+            <li class="list-group-item ">All Details</li>
+            <li class="list-group-item ">Income : {{totalIncome}}</li>
+            <li class="list-group-item ">Expense  : {{totalExpense}}</li>
+            <li class="list-group-item ">Profit :{{totalIncome - totalExpense}}</li>
+            <li class="list-group-item ">Balance : {{totalBalance}}</li>
+        </mat-card-content>
       
-        <li class="list-group-item ">All Details</li>
-        <li class="list-group-item ">Income : {{totalIncome}}</li>
-        <li class="list-group-item ">Expense  : {{totalExpense}}</li>
-        <li class="list-group-item ">Profit :{{totalIncome - totalExpense}}</li>
-        <li class="list-group-item ">Balance : {{totalBalance}}</li>
+        </mat-card>
+    </div>
+
+    <div class="col-sm-6">
+      <mat-card >
+        <mat-card-title>
+          Sugar Details
+        </mat-card-title>
+        <mat-card-content>
+         
+          <form  [formGroup]="createForm" class="create-form">
+          <div class="row">
+            <div class="col-sm-6"> <mat-form-field>
+              <mat-label>
+                  From Date 
+              </mat-label>
+              <input matInput  formControlName="fromDate"  #fromDate  [matDatepicker]="date1">
+              <mat-datepicker-toggle [for]="date1" matSuffix></mat-datepicker-toggle>
+              <mat-datepicker #date1></mat-datepicker>
+          </mat-form-field></div>
+            <div class="col-sm-6">
+              <mat-form-field>
+                <mat-label>
+                   To Date 
+                </mat-label>
+                <input matInput  formControlName="toDate"  #toDate  [matDatepicker]="date2">
+                <mat-datepicker-toggle [for]="date2" matSuffix></mat-datepicker-toggle>
+                <mat-datepicker #date2></mat-datepicker>
+            </mat-form-field></div>
+                  <div class="button">
+                   
+                    <button [disabled]="createForm.invalid" mat-raised-button color="primary"  (click)='filterData(fromDate.value,toDate.value)' >Filter</button>
+                   
+                    <button  [disabled]="createForm.invalid" mat-raised-button color="warn"  (click)="createForm.reset()" >clear</button>
+                </div>
+              </div>
+          </form>
+            <br>
+            <div *ngIf="filterDataTons !== 0">
+          <li class="list-group-item" >Total Tons :{{filterDataTons}}</li>
+            <li class="list-group-item ">Total Income : {{filterDataIncome}}</li>
+            </div>
+          </mat-card-content>
       
-      
+        </mat-card>
+    </div>
+  </div>
   
-    </mat-card-content>
-  
-    </mat-card>
   
   <div class="container">
       <h1>Details of All  customers </h1>
@@ -234,7 +280,7 @@
       </table>
 
     
-      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons [pageSize]="10"></mat-paginator>
     </div>
     
 </div>

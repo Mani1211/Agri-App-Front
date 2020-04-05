@@ -1,36 +1,3 @@
 
 
-.name{
-  
-  color: darkred;
-}
 
-/* .expansion{
-color: aquamarine;
-background: linear-gradient(to bottom right, #0099ff 0%, #ff0066 99%);
-padding: 15px;
-} */
-.title{
-  color:#2B2B52;
-  text-decoration: double;
-}
-
-:host{
-  display: flex;
-  flex-direction: column;
-  height:100;
-}
-
-mat-toolbar{
-  text-align: center;
-}
-
-/* .content{
-  background: linear-gradient(to bottom right, #ff9999 0%, #3399ff 102%)
-} */
-
-/* .content{
-  background-image:url('../../assets/Rice.jpg'); 
-  background-repeat: no-repeat;
-  background-size: cover;
-} */

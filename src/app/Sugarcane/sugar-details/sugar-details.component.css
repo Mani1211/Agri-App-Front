@@ -1,7 +1,17 @@
 
 mat-card{
-    width: 400px;
+    width: 500px;
 }
+
+.button{
+    padding-left: 200px;
+}
+.button2{
+    padding-left: 100px;
+    padding-bottom: 50x;
+
+}
+
 
 table {
 width: 100%;

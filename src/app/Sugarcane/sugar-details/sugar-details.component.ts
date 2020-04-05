@@ -4,6 +4,9 @@ import {SugarcaneService} from '../../sugarcane.service'
 import {MatTableDataSource, MatSort,MatPaginator } from '@angular/material'
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
+import { FormGroup, FormBuilder, FormControl, Validators } from "@angular/forms"
+
+
 @Component({
   selector: 'sugar-details',
   templateUrl: './sugar-details.component.html',
@@ -17,8 +20,12 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   ]
 })
 export class SugarDetailsComponent implements OnInit {
+  createForm:FormGroup
   incomeDetails=[];
+  filterIncome=[];
   expenseDetails=[];
+  // fromDate="4/2/2020"
+  // toDate="5/31/2020"
   totalIncome=0;
   totalExpense=0;
   totalBalance=0;
@@ -28,6 +35,8 @@ export class SugarDetailsComponent implements OnInit {
   searchKey2: string;
   expandedElement;
   expandedElement2;
+  filterDataIncome=0;
+  filterDataTons=0;
 
   @ViewChild(MatSort) sort1:MatSort
   @ViewChild(MatPaginator) paginator1:MatPaginator
@@ -35,27 +44,33 @@ export class SugarDetailsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator2:MatPaginator
   
 
-  constructor(private details:SugarcaneService,private router:Router) { }
+  constructor(private details:SugarcaneService,private router:Router,private fb:FormBuilder) { 
+    this.createForm=this.fb.group({
+      fromDate:[''],
+      toDate:['']
+    })
+  }
 
   displayedColumns1: string[] = ['date','customerName','customerPlace','vehicleNumber','ryotNumber','plotNumber','costPerTon','totalTons','amount','advance','balance','amountGiven'];
 
   displayedColumns2: string[] = ['date','driverName','managerName','driverSalary','managerSalary','petrol','diesel','service','spare','foodCost','totalAmount'];
 
   ngOnInit() {
- 
     this.fetchIncomes();
     this.fetchExpense();
+    
   }
 
   fetchIncomes(){
     this.details.getIncomeDetails().subscribe((data:any) =>{
             this.incomeDetails=data;
+            // this.filterData(this.fromDate,this.toDate);
             this.incomeDetails1= new MatTableDataSource(data)
             this.incomeDetails1.sort=this.sort1
             this.incomeDetails1.paginator=this.paginator1
             console.log("Data requested....",this.incomeDetails);
             this.totalSugarIncome();
-            
+           
     })
    }
    fetchExpense(){
@@ -74,6 +89,7 @@ export class SugarDetailsComponent implements OnInit {
     totalSugarIncome(){
       for(let i=0;i<this.incomeDetails.length;i++){
         this.totalIncome = this.totalIncome + this.incomeDetails[i].amountGiven;
+        
       }
       return console.log(this.totalIncome);
     }  
@@ -87,7 +103,7 @@ export class SugarDetailsComponent implements OnInit {
 
     totalSugarBalance(){
       for(let i=0;i<this.incomeDetails.length;i++){
-        this.totalBalance = this.totalBalance + this.incomeDetails[i].balance;
+        this.totalBalance += this.incomeDetails[i].balance;
       }
       return console.log(this.totalBalance);
     }  
@@ -101,11 +117,28 @@ export class SugarDetailsComponent implements OnInit {
     applyFilter() {
       this.incomeDetails1.filter = this.searchKey1.trim().toLowerCase();
       this.expenseDetails1.filter = this.searchKey2.trim().toLowerCase();
-      
-      
     }
 
 
+filterData(fromDate,toDate){
+  console.log(fromDate,toDate)
+  var result = this.incomeDetails.filter((income)=>{
+    return income.date >= fromDate && income.date <= toDate;
+  })
+  console.log(result,"filtered data")
+ 
+  for(let i=0;i<result.length ;i++){
+      this.filterDataIncome +=result[i].amountGiven;
+      console.log(this.filterDataIncome,"income")
+      this.filterDataTons +=result[i].totalTons;
+      console.log(this.filterDataTons,"tons")
+  }
+  console.log(this.filterDataIncome,this.filterDataTons)
+}
 
+clearData(fromDate,toDate){
+  fromDate="";
+  toDate=""
+}
 }
 

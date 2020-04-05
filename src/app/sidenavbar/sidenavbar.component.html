@@ -1,107 +1,104 @@
 
-
-
-<mat-sidenav-container fullscreen > 
-
-  
-
-  <mat-sidenav #sidenav opened mode="side"  >
-  <!-- <mat-toolbar style=" background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);">  -->
-  <mat-toolbar color="primary"> 
-     <h3 style="padding-left: 40px;"> Agri Machines</h3>
- </mat-toolbar>
-
-         
-     
-      <br>
-      <br><br>
-      
-      <mat-expansion-panel class="expansion">
-        <mat-expansion-panel-header>
-          <mat-panel-title class="title">
-            Rice Transplanter Machine
-          </mat-panel-title>   
-        </mat-expansion-panel-header>
-       
-        <mat-nav-list>
-          <a mat-list-item routerLink="/main/riceincome">Income</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-list-item routerLink="/main/riceexpense">Expense</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-list-item routerLink="/main/ricedetails">All details</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-list-item routerLink="/main/ricemanage">Manage income & Expense</a>
-        </mat-nav-list>
-      </mat-expansion-panel>
-     
-      <mat-expansion-panel class="expansion">
-        <mat-expansion-panel-header>
-          <mat-panel-title class="title">
-            Sugar cane Harvester Machine
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-       
-        <mat-nav-list>
-          <a mat-list-item routerLink="/main/sugarincome">Income</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-list-item routerLink="/main/sugarexpense">Expense</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-list-item routerLink="/main/sugardetails">All details</a>
-        </mat-nav-list>
-        <mat-nav-list>
-          <a mat-list-item routerLink="/main/sugarmanage">Manage income & Expense</a>
-        </mat-nav-list>
-      </mat-expansion-panel>
-
-  
-      <mat-expansion-panel class="expansion">
-        <mat-expansion-panel-header>
-          <mat-panel-title class="title">
-            Baler Machine
-          </mat-panel-title>
-        </mat-expansion-panel-header>
+<div class="container-fluid">
+  <div class="row">
+   
+      <mat-sidenav-container fullscreen > 
+        <mat-sidenav #sidenav opened mode="side">
+        <mat-toolbar color="primary"> 
+           <h3 style="padding-left: 40px;"> Agri Machines</h3>
+        </mat-toolbar>
+            <br>
+            <br><br>
+            
+            <mat-expansion-panel class="expansion">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="title">
+                  Rice Transplanter Machine
+                </mat-panel-title>   
+              </mat-expansion-panel-header>
+             
+              <mat-nav-list>
+                <a mat-list-item routerLink="/main/riceincome">Income</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item routerLink="/main/riceexpense">Expense</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item routerLink="/main/ricedetails">All details</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item routerLink="/main/ricemanage">Manage income & Expense</a>
+              </mat-nav-list>
+            </mat-expansion-panel>
+           
+            <mat-expansion-panel class="expansion">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="title">
+                  Sugar cane Harvester Machine
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+             
+              <mat-nav-list>
+                <a mat-list-item routerLink="/main/sugarincome">Income</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item routerLink="/main/sugarexpense">Expense</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item routerLink="/main/sugardetails">All details</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item routerLink="/main/sugarmanage">Manage income & Expense</a>
+              </mat-nav-list>
+            </mat-expansion-panel>
       
         
-      <mat-nav-list>
-        <a mat-list-item routerLink="/main/balerrentincome">Rent Income</a>
-      </mat-nav-list>
-
-      <mat-nav-list>
-        <a mat-list-item routerLink="/main/balersellincome">Sell Income</a>
-      </mat-nav-list>
-      <mat-nav-list>
-        <a mat-list-item routerLink="/main/balerexpense">Expense</a>
-      </mat-nav-list>
-      <mat-nav-list>
-        <a mat-list-item routerLink="/main/balerdetails">All details</a>
-      </mat-nav-list>
-      <mat-nav-list>
-        <a mat-list-item routerLink="/main/balermanage">Manage income & Expense</a>
-      </mat-nav-list>
-               </mat-expansion-panel>
-    <!-- </mat-card> -->
-   
-  </mat-sidenav>
-  <mat-sidenav-content class="content">
-  
-        <mat-toolbar  color="primary" >
-         <h2 style="padding-left: 320px; "> Agriculture Machine Management</h2>
-         <mat-nav-list style="padding-left: 350px; padding-bottom: 5px;" routerLink="/login">
-       <span style="padding-top: 10px;"></span>Logout
-        </mat-nav-list>
-          </mat-toolbar>
-
+            <mat-expansion-panel class="expansion">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="title">
+                  Baler Machine
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+            
+              
+            <mat-nav-list>
+              <a mat-list-item routerLink="/main/balerrentincome">Rent Income</a>
+            </mat-nav-list>
+      
+            <mat-nav-list>
+              <a mat-list-item routerLink="/main/balersellincome">Sell Income</a>
+            </mat-nav-list>
+            <mat-nav-list>
+              <a mat-list-item routerLink="/main/balerexpense">Expense</a>
+            </mat-nav-list>
+            <mat-nav-list>
+              <a mat-list-item routerLink="/main/balerdetails">All details</a>
+            </mat-nav-list>
+            <mat-nav-list>
+              <a mat-list-item routerLink="/main/balermanage">Manage income & Expense</a>
+            </mat-nav-list>
+                     </mat-expansion-panel>
+      
          
-    <div style="padding-top:5px;">
-      <router-outlet></router-outlet>
+        </mat-sidenav>
+        <mat-sidenav-content class="content">
+           <mat-toolbar  color="primary" >
+               <h2 style="padding-left: 320px; "> Agriculture Machine Management</h2>
+               <mat-nav-list style="padding-left: 350px; padding-bottom: 5px;" routerLink="/login">
+             <span style="padding-top: 10px;"></span>Logout
+              </mat-nav-list>
+                </mat-toolbar>    
+          <div style="padding-top:5px;" class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+
+                <router-outlet></router-outlet>
+              </div>
+            </div>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
     </div>
-   
-      
-      
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  
+</div>
+

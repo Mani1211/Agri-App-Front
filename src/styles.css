@@ -17,10 +17,10 @@
 }
 
 body{
-  background-image: url('./assets/wp1886334.jpg');
+  background-image: url('./assets/wp1886342.jpg');
   background-repeat: no-repeat;
-   background-size: cover; 
-  background-position:initial
+   background-size: auto; 
+   background-position:initial;
  
 }
 .search-div{
