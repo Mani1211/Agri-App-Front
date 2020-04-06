@@ -5,6 +5,8 @@
         <mat-card-title>
           Full Details
         </mat-card-title>
+        <br>
+        <br>
         <mat-card-content>
          
           
@@ -56,8 +58,16 @@
             <div *ngIf="filterDataTons !== 0">
           <li class="list-group-item" >Total Tons :{{filterDataTons}}</li>
             <li class="list-group-item ">Total Income : {{filterDataIncome}}</li>
+            <li class="list-group-item" >Total Expense :{{filterDataExpense}}</li>
+            <li class="list-group-item ">Total Balance : {{filterDataBalance}}</li>
+            <br>
+            <div class="button" *ngIf="filterDataTons !== 0">
+              <button  mat-raised-button color="primary"  (click)='clearData()' >Refresh</button>
+           </div>
             </div>
-          </mat-card-content>
+
+          
+            </mat-card-content>
       
         </mat-card>
     </div>

@@ -24,8 +24,7 @@ export class SugarDetailsComponent implements OnInit {
   incomeDetails=[];
   filterIncome=[];
   expenseDetails=[];
-  // fromDate="4/2/2020"
-  // toDate="5/31/2020"
+
   totalIncome=0;
   totalExpense=0;
   totalBalance=0;
@@ -37,6 +36,8 @@ export class SugarDetailsComponent implements OnInit {
   expandedElement2;
   filterDataIncome=0;
   filterDataTons=0;
+  filterDataExpense=0;
+  filterDataBalance=0;
 
   @ViewChild(MatSort) sort1:MatSort
   @ViewChild(MatPaginator) paginator1:MatPaginator
@@ -114,6 +115,12 @@ export class SugarDetailsComponent implements OnInit {
       this.applyFilter();
     }
     
+    clearData(){
+      this.filterDataExpense=0;
+      this.filterDataIncome=0;
+      this.filterDataBalance=0;
+      this.filterDataTons=0;
+    }
     applyFilter() {
       this.incomeDetails1.filter = this.searchKey1.trim().toLowerCase();
       this.expenseDetails1.filter = this.searchKey2.trim().toLowerCase();
@@ -125,20 +132,29 @@ filterData(fromDate,toDate){
   var result = this.incomeDetails.filter((income)=>{
     return income.date >= fromDate && income.date <= toDate;
   })
-  console.log(result,"filtered data")
+
+  var result1 = this.expenseDetails.filter((expense)=>{
+    return expense.date >= fromDate && expense.date <= toDate;
+  })
+  
+  console.log(result,"filtered income data")
+  console.log(result1,"filtered expense data")
  
   for(let i=0;i<result.length ;i++){
       this.filterDataIncome +=result[i].amountGiven;
       console.log(this.filterDataIncome,"income")
       this.filterDataTons +=result[i].totalTons;
       console.log(this.filterDataTons,"tons")
+      this.filterDataBalance +=result[i].balance;
+      console.log(this.filterDataBalance,"balance")
   }
   console.log(this.filterDataIncome,this.filterDataTons)
+
+  for(let i=0;i<result1.length;i++){
+    this.filterDataExpense += result1[i].totalAmount
+  }
+  console.log(this.filterDataExpense,"expense")
 }
 
-clearData(fromDate,toDate){
-  fromDate="";
-  toDate=""
-}
 }
 
