@@ -9,7 +9,7 @@
     "postinstall": "ng build --prod",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:gh": "ng build --prod --base-href='https://Mani1211.github.io/Agri-App-Front/' && ngh"
+    "deploy": "ng build --prod --base-href https://mani1211.github.io/Agri-App-Front/ && angular-cli-ghpages --branch gh-pages"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +47,7 @@
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",

@@ -7,8 +7,8 @@ import { HttpClient } from "@angular/common/http";
 export class BalerService {
   constructor(private http: HttpClient) {}
 
-  // uri = "https://glacial-beyond-05487.herokuapp.com";
-  uri = "http://localhost:3000";
+  uri = "https://glacial-beyond-05487.herokuapp.com";
+  // uri = "http://localhost:3000";
 
   getIncomeDetails() {
     return this.http.get(`${this.uri}/balerrentincomedetails`);

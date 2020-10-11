@@ -6,8 +6,8 @@ import _ from "lodash";
   providedIn: "root",
 })
 export class RicePlantService {
-  // uri = "https://glacial-beyond-05487.herokuapp.com";
-  uri = "http://localhost:3000";
+  uri = "https://glacial-beyond-05487.herokuapp.com";
+  // uri = "http://localhost:3000";
 
   constructor(private http: HttpClient) {}
 
