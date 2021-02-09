@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
   providedIn: "root",
 })
 export class SugarcaneService {
-  uri = "https://glacial-beyond-05487.herokuapp.com";
+  uri = "https://agriapp-api.herokuapp.com";
   // uri = "http://localhost:3000";
 
   constructor(private http: HttpClient) {}
